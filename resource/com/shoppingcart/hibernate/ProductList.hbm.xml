@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.shoppingcart.vo">
+
+<class name="com.shoppingcart.vo.ProductList" table="product_list"
+		dynamic-insert="true" dynamic-update="true" >
+
+		<id name="productId" type="int" column="product_id">
+			<generator class="assigned" />
+		</id>
+		
+		<property name="productName" type="java.lang.String" column="product_name"
+			not-null="true" length="15" />
+		<property name="productDetails" type="java.lang.String" column="product_details"
+			not-null="true" length="15" />		
+		<property name="productQuantity" type="java.lang.String" column="product_quantity"
+			not-null="true" length="100" />
+		<property name="productCost" type="java.lang.String" column="product_cost"
+			not-null="true" length="100" />	
+			
+</class>
+</hibernate-mapping>
