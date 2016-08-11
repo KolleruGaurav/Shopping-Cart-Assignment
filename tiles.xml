@@ -1,0 +1,53 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+   <definition name="base" template="/jsp/layoutmanager.jsp">   
+   <put-attribute name="title" value=""/>
+   <put-attribute name="header" value="/jsp/header.jsp"/>
+   <put-attribute name="footer" value="/jsp/footer.jsp"/>     
+   <put-attribute name="body" value=""/>   
+   </definition>  
+	
+	<definition name="loginbase" template="/jsp/layoutmanager.jsp">   
+   <put-attribute name="title" value=""/>
+   <put-attribute name="header" value="/jsp/loginheader.jsp"/>
+   <put-attribute name="footer" value="/jsp/footer.jsp"/>     
+   <put-attribute name="body" value=""/>   
+   </definition> 
+   
+    
+	<definition name="login" extends="loginbase">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body" value="/jsp/login.jsp" />
+    </definition>
+    
+    
+    <definition name="welcome" extends="base">
+        <put-attribute name="title" value="welcome" />
+        <put-attribute name="body" value="/jsp/welcome.jsp" />
+    </definition>
+    
+    
+    <definition name="productlist" extends="base">
+        <put-attribute name="title" value="ProductList" />
+        <put-attribute name="body" value="/jsp/productlist.jsp" />
+    </definition>
+    
+    <definition name="cartlist" extends="base">
+        <put-attribute name="title" value="cartList" />
+        <put-attribute name="body" value="/jsp/cartlist.jsp" />
+    </definition>
+    
+     <definition name="checkout" extends="base">
+        <put-attribute name="title" value="cartList" />
+        <put-attribute name="body" value="/jsp/checkout.jsp" />
+    </definition>
+    
+    <definition name="techDiff" extends="base">
+        <put-attribute name="title" value="cartList" />
+        <put-attribute name="body" value="/jsp/errorPage.jsp" />
+    </definition>
+</tiles-definitions>
